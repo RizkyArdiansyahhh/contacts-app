@@ -2,7 +2,7 @@
 import ContactItem from "./ContactItem";
 
 const ContactList = (props) => {
-  const { contacts } = props;
+  const { contacts, onDelete } = props;
   return (
     <div className="contact-list">
       {contacts.map((contact) => (
@@ -11,6 +11,8 @@ const ContactList = (props) => {
           imageUrl={contact.imageUrl}
           name={contact.name}
           tag={contact.tag}
+          id={contact.id}
+          onDelete={onDelete}
         />
       ))}
     </div>
